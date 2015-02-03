@@ -3,6 +3,12 @@
 A group method on TraversableOnce (and subclasses) that relies on the element order and preserves it.
 
 ```
+implicit class GroupableTraversable[T](i: TraversableOnce[T]) {
+  def group[GT, RT](by: (T) ⇒ GT, as: (T) ⇒ RT = identity[T]): Seq[(GT, Seq[RT])]
+}
+```
+
+```
 val people: Seq[Person] = ???
 val peopleByName:Seq[(Name,Seq[Person])] = people.group(by = _.name)
 ```
