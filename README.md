@@ -1,2 +1,33 @@
 # groupable
-A group function that relies on the element order and preserves it
+
+A group method on TraversableOnce (and subclasses) that relies on the element order and preserves it.
+
+## Installation
+
+```
+resolvers += Resolver.url("Agilogy Scala",url("http://dl.bintray.com/agilogy/scala/"))(Resolver.ivyStylePatterns)
+
+libraryDependencies += "com.agilogy" %% "groupable" % "1.0.0"
+```
+
+## Usage
+
+See the tests:
+
+```
+it should "group mapping values" in {
+  val s = Seq("email" -> "j@example.com", "email" -> "k@example.com", "name" -> "John")
+  val res = s.group(by = _._1, as = _._2)
+  assert(res === Seq("email" -> Seq("j@example.com", "k@example.com"), "name" -> Seq("John")))
+}
+```
+
+## Copyright
+
+Copyright 2015 Agilogy
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

@@ -27,7 +27,8 @@ class GroupableTest extends FlatSpec {
 
   it should "group mapping values" in {
     val s = Seq("email" -> "j@example.com", "email" -> "k@example.com", "name" -> "John")
-    assert(s.group(_._1, _._2) === Seq("email" -> Seq("j@example.com", "k@example.com"), "name" -> Seq("John")))
+    val res = s.group(by = _._1, as = _._2)
+    assert(res === Seq("email" -> Seq("j@example.com", "k@example.com"), "name" -> Seq("John")))
   }
 
   it should "regroup a grouped seq" in {
