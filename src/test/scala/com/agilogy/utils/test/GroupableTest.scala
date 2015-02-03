@@ -1,6 +1,5 @@
 package com.agilogy.utils.test
 
-import com.agilogy.utils.Groupable
 import org.scalatest.FlatSpec
 
 class GroupableTest extends FlatSpec {

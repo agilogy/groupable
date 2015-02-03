@@ -3,12 +3,7 @@
 A group method on TraversableOnce (and subclasses) that relies on the element order and preserves it.
 
 ```
-implicit class GroupableTraversable[T](i: TraversableOnce[T]) {
-  def group[GT, RT](by: (T) ⇒ GT, as: (T) ⇒ RT = identity[T]): Seq[(GT, Seq[RT])]
-}
-```
-
-```
+import com.agilogy.utils.Groupable._
 val people: Seq[Person] = ???
 val peopleByName:Seq[(Name,Seq[Person])] = people.group(by = _.name)
 ```
@@ -31,7 +26,19 @@ libraryDependencies += "com.agilogy" %% "groupable" % "1.0.0"
 
 ## Usage
 
-See the tests:
+Import Groupable._:
+
+```
+import com.agilogy.utils.Groupable._
+```
+
+Now, a new method `group` is available on TraversableOnce[T]:
+
+```
+def group[GT, RT](by: (T) ⇒ GT, as: (T) ⇒ RT = identity[T]): Seq[(GT, Seq[RT])]
+```
+
+Example (from the tests):
 
 ```
 it should "group mapping values" in {
