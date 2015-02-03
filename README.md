@@ -2,6 +2,19 @@
 
 A group method on TraversableOnce (and subclasses) that relies on the element order and preserves it.
 
+```
+val people: Seq[Person] = ???
+val peopleByName:Seq[(Name,Seq[Person])] = people.group(by = _.name)
+```
+
+It behaves somewhat like the standard groupBy but:
+- It relies on the order of the traversable creating a group for each consecutive element that returns the same group key
+- It preserves the order of the returned groups
+- It returns a Seq of pairs key -> Seq(value) instead of a Map. 
+  - I could have used a ListMap, but the seq makes it evident that lookup time is linear.
+
+The method is added to TraversableOnce and subclasses via [Pimp my Library Pattern](http://www.artima.com/weblogs/viewpost.jsp?thread=179766).
+
 ## Installation
 
 ```
