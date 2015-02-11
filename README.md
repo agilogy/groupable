@@ -1,6 +1,7 @@
 # groupable
 
 [![Build Status](https://travis-ci.org/agilogy/groupable.svg)](https://travis-ci.org/agilogy/groupable)
+[![Coverage Status](https://coveralls.io/repos/agilogy/groupable/badge.svg)](https://coveralls.io/r/agilogy/groupable)
 
 A group method on TraversableOnce (and subclasses) that relies on the element order and preserves it.
 
