@@ -48,6 +48,10 @@ it should "group mapping values" in {
 }
 ```
 
+## Roadmap
+
+- Maybe we could use a typeclass so that not only `TraversableOne`s are groupables. As an example, it could be interesting for `ResultSet`s.
+
 ## Copyright
 
 Copyright 2015 Agilogy
