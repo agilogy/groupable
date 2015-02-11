@@ -1,5 +1,7 @@
 # groupable
 
+[![Build Status](https://travis-ci.org/agilogy/groupable.svg)](https://travis-ci.org/agilogy/groupable)
+
 A group method on TraversableOnce (and subclasses) that relies on the element order and preserves it.
 
 ```
