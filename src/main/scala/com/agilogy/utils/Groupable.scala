@@ -5,8 +5,10 @@ import scala.collection.mutable.ListBuffer
 object Groupable {
 
   implicit class GroupableTraversable[T](i: TraversableOnce[T]) {
-    
-    def group[GT, RT](by: ((T) => GT), as: ((T) => RT) = identity[T] _): Seq[(GT, Seq[RT])] = {
+
+    def group[GT, RT](by: ((T) => GT)): Seq[(GT, Seq[T])] = group(by,identity[T])
+
+    def group[GT, RT](by: ((T) => GT), as: ((T) => RT)): Seq[(GT, Seq[RT])] = {
       if (i.isEmpty) Seq()
       else {
         val result = new ListBuffer[(GT, Seq[RT])]

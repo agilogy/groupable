@@ -35,10 +35,11 @@ Import Groupable._:
 import com.agilogy.utils.Groupable._
 ```
 
-Now, a new method `group` is available on TraversableOnce[T]:
+Now, two new methods `group` are available on TraversableOnce[T]:
 
 ```
-def group[GT, RT](by: (T) ⇒ GT, as: (T) ⇒ RT = identity[T]): Seq[(GT, Seq[RT])]
+def group[GT, RT](by: ((T) => GT)): Seq[(GT, Seq[T])]
+def group[GT, RT](by: (T) ⇒ GT, as: (T) ⇒ RT): Seq[(GT, Seq[RT])]
 ```
 
 Example (from the tests):
