@@ -4,11 +4,11 @@ organization := "com.agilogy"
 
 name := "groupable"
 
-version := "1.0.1"
+version := "1.1"
 
-crossScalaVersions := Seq("2.10.4","2.11.5")
+crossScalaVersions := Seq("2.10.7","2.11.12","2.12.6")
 
-libraryDependencies += "org.scalatest" % "scalatest_2.10" % "1.9.1" % "test"
+libraryDependencies +=   "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 
 publishMavenStyle := false
 
