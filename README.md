@@ -24,7 +24,7 @@ The method is added to TraversableOnce and subclasses via [Pimp my Library Patte
 ```
 resolvers += Resolver.url("Agilogy Scala",url("http://dl.bintray.com/agilogy/scala/"))(Resolver.ivyStylePatterns)
 
-libraryDependencies += "com.agilogy" %% "groupable" % "1.0.1"
+libraryDependencies += "com.agilogy" %% "groupable" % "1.1"
 ```
 
 ## Usage
