@@ -4,7 +4,7 @@ organization := "com.agilogy"
 
 name := "groupable"
 
-version := "1.1"
+version := "1.2"
 
 crossScalaVersions := Seq("2.11.12","2.12.13")
 

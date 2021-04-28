@@ -22,9 +22,9 @@ The method is added to TraversableOnce and subclasses via [Pimp my Library Patte
 ## Installation
 
 ```
-resolvers += "Agilogy GitLab" at "https://gitlab.com/api/v4/groups/583742/packages/maven"
+resolvers += "Agilogy GitLab" at "https://gitlab.com/api/v4/groups/583742/-/packages/maven"
 
-libraryDependencies += "com.agilogy" %% "groupable" % "1.1"
+libraryDependencies += "com.agilogy" %% "groupable" % "1.2"
 ```
 
 ## Usage
