@@ -22,9 +22,9 @@ The method is added to TraversableOnce and subclasses via [Pimp my Library Patte
 ## Installation
 
 ```
-resolvers += Resolver.url("Agilogy Scala",url("http://dl.bintray.com/agilogy/scala/"))(Resolver.ivyStylePatterns)
+resolvers += "Agilogy GitLab" at "https://gitlab.com/api/v4/groups/583742/-/packages/maven"
 
-libraryDependencies += "com.agilogy" %% "groupable" % "1.1"
+libraryDependencies += "com.agilogy" %% "groupable" % "1.2"
 ```
 
 ## Usage
@@ -55,6 +55,14 @@ it should "group mapping values" in {
 ## Roadmap
 
 - Maybe we could use a typeclass so that not only `TraversableOne`s are groupables. As an example, it could be interesting for `ResultSet`s.
+
+## Publishing
+
+To publish this package to Agilogy's Package Registry, set the `GITLAB_DEPLOY_TOKEN` environment variable and then run the following command in sbt:
+
+```
+sbt:groupable> +publish
+```
 
 ## Copyright
 
